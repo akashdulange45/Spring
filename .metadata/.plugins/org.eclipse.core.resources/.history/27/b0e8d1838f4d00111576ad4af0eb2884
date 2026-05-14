@@ -1,0 +1,52 @@
+package in.ad.MavenProject2;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import in.ad.resources.SpringConfigFile;
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+//    	String stdroll = "103";
+//    	String stdname = "suraj";
+//    	String stdmarks = "100";
+    	
+    	
+    	
+        ApplicationContext context = new AnnotationConfigApplicationContext(SpringConfigFile.class);
+        JdbcTemplate jdbctemplete =   context.getBean(JdbcTemplate.class);
+      
+       ////-------------Insert Operation-------------
+        
+//        String sql_query = "INSERT INTO student VALUES(?,?,?)";
+//        int count =  jdbctemplete.update(sql_query,stdroll,stdname,stdmarks );
+//       if (count > 0) {
+//		System.out.println("Insertion Successfull");
+//	}else {
+//		System.out.println("Insertion faild");
+//	}
+       
+       ////-----------Update Operation-----------------
+        
+//        String marks = "92.12";
+//        String rollno = "103";
+//        String updatequery ="UPDATE student SET stdmarks=? WHERE stdroll=? ";
+//         int count =jdbctemplete.update(updatequery,marks,rollno);
+//         if (count>0) {
+//			System.out.println("Updation Successfull");
+//		}else {
+//			System.out.println("Updation Faild");
+//		}
+        
+        ////-----------Delete Operation------------
+        
+        String rollno = "102";
+        
+        String deletequery = "DELETE FROM student WHERE stdroll=?";
+        jdbctemplete.update(deletequery,rollno);
+    
+    }
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.m2e.Maven2LaunchConfigurationType">
+    <booleanAttribute key="M2_BATCH" value="false"/>
+    <stringAttribute key="M2_GOALS" value="-U archetype:generate"/>
+    <listAttribute key="M2_PROPERTIES">
+        <listEntry value="archetypeGroupId=cn.org.thinkcloud.quickstart"/>
+        <listEntry value="archetypeArtifactId=think-cloud-quickstart-archetype"/>
+        <listEntry value="archetypeVersion=2.0.0.RELEASE"/>
+        <listEntry value="groupId=com.brianworks"/>
+        <listEntry value="artifactId=MavenDemo"/>
+        <listEntry value="version=0.0.1-SNAPSHOT"/>
+        <listEntry value="package=com.brianworks"/>
+        <listEntry value="outputDirectory=C:\Users\akash\eclipse-workspace\Spring"/>
+    </listAttribute>
+    <booleanAttribute key="M2_SAVE_BEFORE_LAUNCH" value="false"/>
+    <booleanAttribute key="org.eclipse.debug.ui.private" value="true"/>
+    <stringAttribute key="org.eclipse.jdt.launching.WORKING_DIRECTORY" value="C:\Users\akash\AppData\Local\Temp\m2e-archetypeGenerator15662313024417366525"/>
+</launchConfiguration>

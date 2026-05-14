@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean class="in.ad.beans.Address" id="addId">
+<constructor-arg value="222" />
+<constructor-arg value="mumbai"/>
+<constructor-arg value="123456"/> 
+ 
+</bean>
+
+    <bean class="in.ad.beans.Student" id="stdId">
+  <constructor-arg value="102" />
+<constructor-arg value="Akash"/>
+<constructor-arg ref="addId"/> 
+    </bean>
+
+</beans>

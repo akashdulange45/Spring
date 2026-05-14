@@ -1,0 +1,51 @@
+package in.ad.resources;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import in.ad.beans.Address;
+import in.ad.beans.Student;
+import in.ad.beans.Subjects;
+
+@Configuration
+public class SpringConfigFile {
+	
+	@Bean
+	public Address createadd() {
+		Address addr = new Address();
+		
+		addr.setHouseno(1123);
+		addr.setCity("Tuljapur");
+		addr.setPincode(413601);
+		
+		
+		return addr;
+	}
+	
+	@Bean
+	public Subjects createsub() {
+		Subjects sub = new Subjects();
+		List<String> sublist = new ArrayList<String>();
+		
+		sublist.add("Java");
+		sublist.add("React");
+		sublist.add("Javascript");
+		sub.setSubject(sublist);
+		
+		return sub;
+	}
+	
+	@Bean
+	public Student createstd() {
+		Student std = new Student();
+		std.setName("Akash");
+		std.setRollno(11);
+	//	std.setAddress(createadd());    //manually Dependecy Injected
+	//	std.setSubjects(createsub());     ////manually Dependecy Injected
+		return std;
+	}
+
+}
